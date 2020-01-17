@@ -13,7 +13,7 @@ time = time.asctime()
 
 file = open('Daily_Log.txt' , 'a+') # Create a new file if not exists and open to append data
 
-timestamp = "---Log Start--- \n"+time+"\n- - - - - - - - - \n" # Add the Date and time
+timestamp = "\n---Log Start--- \n"+time+"\n- - - - - - - - - \n" # Add the Date and time
 
 file.write(timestamp) # Write the timestamp to file
 
