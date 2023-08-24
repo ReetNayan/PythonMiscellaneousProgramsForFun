@@ -229,3 +229,53 @@ sd=sqrt(var);
 printf("\n\nmean=%f\nsum=%f\n sd=%f\n var=%f\n",mean,sum,sd,var);
 return 0;
 }
+
+
+//structure
+#include <stdio.h>
+struct student{
+int id;
+char name[30];
+float marks[6];
+float avg;
+};
+int main(){
+struct student s[25];
+int n,i,j;
+printf("Enter number of students:");
+scanf("%d",&n);
+for(i=0;i<n;i++)
+{
+printf("Enter student id:");
+scanf("%d",&s[i].id);
+printf("Enter student name:");
+scanf("%s",s[i].name);
+printf("Enter the marks of students:");
+for(j=0;j<6;j++)
+{
+scanf("%f",&s[i].marks[j]);
+}
+}
+for(i=0;i<n;i++)
+{
+float sum=0;
+for(j=0;j<6;j++){
+{
+sum+=s[i].marks[j];
+}
+s[i].avg=sum/6.0;
+}
+printf("Student id \t Student Name \t Average \n");
+for(i=0;i<n;i++)
+{
+if (s[i].avg>=40)
+printf("%sd\t%10s\t%f\n",s[i].id,s[i].name,s[i].avg);
+}
+printf("Student id \t Student Name \t Average \n");
+for(i=0;i<n;i++)
+{
+if (s[i].avg>=40)
+printf("%sd\t%10s\t%f\n",s[i].id,s[i].name,s[i].avg);
+}
+return 0;
+}
